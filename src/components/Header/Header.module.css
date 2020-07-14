@@ -1,0 +1,12 @@
+.head{
+    grid-area: h;
+    background-color: rgb(182, 182, 182);
+    border-radius:0 0 10px 10px;
+  }
+  .head:hover{
+    background-color: rgb(46, 46, 46);
+    transition: 0.5s;
+  }
+  .head img{
+    width: 60px;
+  }
