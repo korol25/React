@@ -12,27 +12,24 @@ const MyPosts = (props) => {
 
   let newPostElement = React.createRef();
 
-  let addPost = () => {
-    //props.addPost();
-    props.dispatch(addPostActionCreator());
+  let onAddPost = () => {
+    props.addPost();
   }
 
   let onPostChange = () => {
     let text = newPostElement.current.value;
-    //props.updateNewPostText(text);
-    let action = updateNewPostTextActionCreator(text);
-    props.dispatch(action);
+    debugger;
+    props.updateNewPostText(text);
   }
 
   return (
     <div className={classes.postsBlock}>
       <h2>My Posts</h2>
       <textarea onChange={onPostChange} ref={newPostElement} value={props.newPostText} placeholder='Enter your message' cols="30" rows="3" />
-      <div><button onClick={addPost}>Add Post</button></div>
+      <div><button onClick={onAddPost}>Add Post</button></div>
       {postsElements}
     </div>
 
   );
 }
-
 export default MyPosts;
