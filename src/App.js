@@ -5,24 +5,16 @@ import Navigation from './components/Navigation/Navigation';
 import Content from './components/Content/Content';
 import Dialogs from './components/Dialogs/Dialogs';
 import { BrowserRouter, Route } from 'react-router-dom';
-import StoreContext from './StoreContext';
 import DialogsContainer from './components/Dialogs/DialogsContainer';
+import NavigationContainer from './components/Navigation/NavigationContainer';
 
 const App = () => {
   return (
     <BrowserRouter>
       <div className="app-wrapper">
         <Header />
-        <StoreContext.Consumer>
-          { (store)=>{
-            let state = store.getState().sidebar;
-        return <Navigation 
-        state ={state}
-        //state={props.state.sidebar} 
-        />
-      }
-      }
-        </StoreContext.Consumer>
+        <NavigationContainer />
+
         <div className='app-wrapper-content'>
           
           <Route path='/content'

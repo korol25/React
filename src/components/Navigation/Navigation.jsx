@@ -5,7 +5,8 @@ import { NavLink } from 'react-router-dom';
 
 const Navigation = (props) => {
 
-    let topUsers = props.state.sidebar.map((bf) => 
+    let state = props.state;
+    let topUsers = state.sidebar.map((bf) => 
         <div className={classes.banner}>
             <img src={bf.src} alt='' />
             <p>{bf.name}</p>
