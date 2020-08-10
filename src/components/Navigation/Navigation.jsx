@@ -13,13 +13,13 @@ const Navigation = (props) => {
         </div>
     );
 
-
     return (
         <div>
             <div className={classes.nav}>
                 <nav>
-                    <div className={classes.navItem}><NavLink to='/content' activeClassName={classes.active}>Profile</NavLink></div>
+                    <div className={classes.navItem}><NavLink to='/profile' activeClassName={classes.active}>Profile</NavLink></div>
                     <div className={classes.navItem}><NavLink to='/dialogs' activeClassName={classes.active}>Messages</NavLink></div>
+                    <div className={classes.navItem}><NavLink to='/users' activeClassName={classes.active}>Users</NavLink></div>
                     <div className={classes.navItem}><NavLink to='/news' activeClassName={classes.active}>News</NavLink></div>
                     <div className={classes.navItem}><NavLink to='/music' activeClassName={classes.active}>Music</NavLink></div>
                     <div className={classes.navItem}><NavLink to='/settings' activeClassName={classes.active}>Settings</NavLink></div>
