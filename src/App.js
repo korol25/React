@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Suspense } from 'react';
 import './App.css';
 import { BrowserRouter, Route} from 'react-router-dom';
@@ -55,3 +56,46 @@ const mapStateToProps = (state) => ({
 export default compose(
   connect(mapStateToProps, { inizializeApp }))(App);
 
+=======
+import React from 'react';
+import './App.css';
+import Header from './components/Header/Header';
+import Navigation from './components/Navigation/Navigation';
+import Content from './components/Content/Content';
+import Dialogs from './components/Dialogs/Dialogs';
+import { BrowserRouter, Route } from 'react-router-dom';
+import DialogsContainer from './components/Dialogs/DialogsContainer';
+import NavigationContainer from './components/Navigation/NavigationContainer';
+
+const App = () => {
+  return (
+    <BrowserRouter>
+      <div className="app-wrapper">
+        <Header />
+        <NavigationContainer />
+
+        <div className='app-wrapper-content'>
+          
+          <Route path='/content'
+            render={() => <Content
+              //store = {props.store}
+               />} />
+          
+          
+
+
+          
+          <Route path='/dialogs'
+            render={() => <DialogsContainer
+              //store = {props.store}
+               // dispatch={props.dispatch}
+               />} />
+        </div>
+        {/**/}
+      </div>
+    </BrowserRouter>
+  );
+}
+
+export default App;
+>>>>>>> 5a8fe1c4d3093d63b9cd0ad006b286c1d75ed124
